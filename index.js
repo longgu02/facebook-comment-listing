@@ -5,8 +5,8 @@ const app = express();
 const port = 6789;
 import { exportCommentToExcel } from './utils/exportData.js'
 import { exportAllCommentToExcel } from './utils/exportData.js';
-const access_token = "EAAAAZAw4FxQIBAOvGoMqF704csvBl3ayIspGTIDkrZACUQkDpoaF1mL3h4o346QC1KZCE2vHAmUGoFpSuS2WdNREUZBMtNraF7U9tl3vkrfvU7Vh8nmczMO4uqfLGZBiWikOsLqkNcZAwZCuOetaT70KgejWjzuZCoNOpHoaooHfvdjMPJIuTZCXo"
-const url = 'https://graph.facebook.com/v12.0/535660056846786_554268649167704?fields=comments{from,message,created_time}&filter=toplevel&limit=300&access_token=' + access_token;
+const access_token = "..." // access token
+const url = 'https://graph.facebook.com/v12.0/'+ 'pageId_postId' +'?fields=comments{from,message,created_time}&filter=toplevel&limit=300&access_token=' + access_token;
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
